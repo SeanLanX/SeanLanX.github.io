@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>java日期字符串转Date类型，并获取int类型年月日</title>
+      <link href="2021/04/23/java%E6%97%A5%E6%9C%9F%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%ACDate/"/>
+      <url>2021/04/23/java%E6%97%A5%E6%9C%9F%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%ACDate/</url>
+      
+        <content type="html"><![CDATA[<p>这篇文章讲解了如何将字符串格式的日期转换为Date类型，并且获取int类型的年月日</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建Date对象</span></span><br><span class="line">Date date=<span class="keyword">new</span> Date();</span><br><span class="line"><span class="comment">//设置字符串输入的格式,大写M代表月份</span></span><br><span class="line">SimpleDateFormat format=<span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd&quot;</span>);</span><br><span class="line"><span class="comment">//待转换的日期字符串</span></span><br><span class="line">String strTime=<span class="string">&quot;2021-04-23&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这一步就将String类型的日期“2021-04-23”转换成了Date类型</span></span><br><span class="line"><span class="comment">//注意这里需要用try catch</span></span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    date=format.parse(strTime);</span><br><span class="line">&#125;<span class="keyword">catch</span>&#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取int类型的年月日</span></span><br><span class="line"><span class="comment">//之前的date.getYear()已经过时，所以现在采用获取Calendar实例</span></span><br><span class="line">Clendar cal=Calendar.getInstance();</span><br><span class="line">cal.setTime(date);<span class="comment">//这里的date参数就是上面使用日期字符串转换得到的</span></span><br><span class="line"><span class="keyword">int</span> year=cal.get(Calendar.YEAR);</span><br><span class="line"><span class="keyword">int</span> month=cal.get(Calendar.MONTH)+<span class="number">1</span>;<span class="comment">//注意，月份需要+1</span></span><br><span class="line"><span class="keyword">int</span> day=cal.get(Calendar.DAY_OF_MONTH);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Eclipse字体颜色背景相关设置</title>
       <link href="2021/04/22/Eclipse%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%83%8C%E6%99%AF%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/"/>
       <url>2021/04/22/Eclipse%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%83%8C%E6%99%AF%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</url>
