@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>Eclipse常用功能</title>
+      <link href="2021/04/27/Eclipse%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"/>
+      <url>2021/04/27/Eclipse%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th align="left">快捷键</th><th align="left">说明</th></tr></thead><tbody><tr><td align="left">Ctrl+t</td><td align="left">查看当前类的子类，查看当前接口的实现类</td></tr><tr><td align="left">Shift+Alt+S</td><td align="left">快速生成构造器、GetSet方法等</td></tr><tr><td align="left">Ctrl+Alt+down</td><td align="left">复制当前行到下一行</td></tr><tr><td align="left">Ctrl+O</td><td align="left">查看当前文件结构（方法、类、变量等）</td></tr><tr><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td></tr><tr><td align="left"></td><td align="left"></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java集合体系</title>
+      <link href="2021/04/27/java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/"/>
+      <url>2021/04/27/java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h3><h4 id="HashMap"><a href="#HashMap" class="headerlink" title="==HashMap=="></a>==HashMap==</h4><p>key是==无序==的</p><h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="==TreeMap=="></a>==TreeMap==</h4><p>key是==有序==的</p><h4 id="HashMap和TreeMap区别"><a href="#HashMap和TreeMap区别" class="headerlink" title="HashMap和TreeMap区别"></a>HashMap和TreeMap区别</h4><blockquote><p>HashMap适合进行插入、删除、查找等操作</p><p>TreeMap适合按顺序遍历</p><p>HashMap一般比TreeMap快一点</p><p>两者都不是线程安全的</p></blockquote><h2 id="集合的遍历"><a href="#集合的遍历" class="headerlink" title="集合的遍历"></a>集合的遍历</h2><h3 id="遍历List集合"><a href="#遍历List集合" class="headerlink" title="遍历List集合"></a>遍历List集合</h3><h4 id="用Iterator迭代器"><a href="#用Iterator迭代器" class="headerlink" title="用Iterator迭代器"></a>用Iterator迭代器</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;String&gt; iterator=list.iterator();</span><br><span class="line"><span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">    System.out.println(iterator.next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="遍历Map集合"><a href="#遍历Map集合" class="headerlink" title="遍历Map集合"></a>遍历Map集合</h4><h4 id="使用foreach遍历entries"><a href="#使用foreach遍历entries" class="headerlink" title="使用foreach遍历entries"></a>使用foreach遍历entries</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> (Map.Entry&lt;Integer, Integer&gt; entry : map.entrySet()) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Key = &quot;</span> + entry.getKey() + <span class="string">&quot;, Value = &quot;</span> + entry.getValue());</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>继承于Collection接口，==不允许出现重复元素，==<strong>==无序==</strong></p><p>实现类主要有==HashSet==和==TreeSet==</p><p>在判断重复元素的时候，Set集合会调用hashCode()和equals()方法来实现</p><blockquote><p> HashSet是哈希表结构，==主要利用HashMap的key来存储元素==，计算插入元素的hashCode来获取元素在集合中的位置；</p><p> 允许插入null值</p><p> ==线程不安全==</p></blockquote><blockquote><p> TreeSet是红黑树结构，每一个元素都是树中的一个节点，==插入的元素都会进行排序==</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java学习笔记</title>
+      <link href="2021/04/27/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>2021/04/27/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随机数产生"><a href="#随机数产生" class="headerlink" title="随机数产生"></a>随机数产生</h3><p>产生0-100随机数</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">int</span>)(Math.round(Math.random()*<span class="number">100</span>))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java日期字符串转Date类型，并获取int类型年月日</title>
       <link href="2021/04/23/java%E6%97%A5%E6%9C%9F%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%ACDate/"/>
       <url>2021/04/23/java%E6%97%A5%E6%9C%9F%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%ACDate/</url>
@@ -84,7 +141,7 @@
       <link href="2021/04/11/Typora%E5%BF%AB%E6%8D%B7%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/"/>
       <url>2021/04/11/Typora%E5%BF%AB%E6%8D%B7%E4%BD%BF%E7%94%A8%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95/</url>
       
-        <content type="html"><![CDATA[<h3 id="Typora添加自定义快捷键"><a href="#Typora添加自定义快捷键" class="headerlink" title="Typora添加自定义快捷键"></a>Typora添加自定义快捷键</h3><p>比如需要添加插入代码块的快捷键，打开偏好设置，在通用设置里找到高级设置，会自动打开一个文件夹</p><p><img src="https://raw.githubusercontent.com/SeanLanX/Images/main/img/20210411173737.png" alt="image-20210411173737448"></p><p><img src="https://raw.githubusercontent.com/SeanLanX/Images/main/img/20210411173859.png" alt="image-20210411173831872"></p><p>打开<code>conf.user.json</code>文件，在keyBinding处添加想要的快捷键即可</p><p><img src="https://raw.githubusercontent.com/SeanLanX/Images/main/img/20210411173923.png" alt="image-20210411173923720"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="Typora添加自定义快捷键"><a href="#Typora添加自定义快捷键" class="headerlink" title="Typora添加自定义快捷键"></a>Typora添加自定义快捷键</h2><p>比如需要添加插入代码块的快捷键，打开偏好设置，在通用设置里找到高级设置，会自动打开一个文件夹</p><p><img src="https://raw.githubusercontent.com/SeanLanX/Images/main/img/20210411173737.png" alt="image-20210411173737448"></p><p><img src="https://raw.githubusercontent.com/SeanLanX/Images/main/img/20210411173859.png" alt="image-20210411173831872"></p><p>打开<code>conf.user.json</code>文件，在keyBinding处添加想要的快捷键即可</p><p><img src="https://raw.githubusercontent.com/SeanLanX/Images/main/img/20210411173923.png" alt="image-20210411173923720"></p><h2 id="添加高亮快捷键"><a href="#添加高亮快捷键" class="headerlink" title="添加高亮快捷键"></a>添加高亮快捷键</h2><p>高亮需要在偏好设置中，打开markdown，勾选高亮</p><p><img src="C:\Users\lanxin\AppData\Roaming\Typora\typora-user-images\image-20210508003323602.png" alt="image-20210508003323602"></p><p>要设置其快捷键，则按照上一步的说明，打开配置文件，找到keyBinding，并在大括号中添加<code>&quot;Highlight&quot;: &quot;Ctrl + q&quot;</code>即可，快捷键根据子集的需要进行设置，最后记得重启</p>]]></content>
       
       
       <categories>
